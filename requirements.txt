@@ -1,0 +1,11 @@
+beautifulsoup4
+flask
+jieba
+matplotlib
+numpy
+pandas
+pypdf
+scikit-learn
+sentence-transformers
+wordcloud
+

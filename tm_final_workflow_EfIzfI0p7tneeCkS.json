@@ -1,0 +1,622 @@
+{
+  "id": "EfIzfI0p7tneeCkS",
+  "name": "tm_final",
+  "nodes": [
+    {
+      "parameters": {
+        "fieldToSplitOut": "data",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        704,
+        512
+      ],
+      "id": "4bad05d2-4867-4e62-9343-d7e61a10145f",
+      "name": "Split Out"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "https://docs.google.com/spreadsheets/d/1aQbufqN5885icG8rlll5rmaoTr2c7maJnOv7KzkILo4/edit?usp=sharing",
+          "mode": "url"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "sheet1",
+          "mode": "name"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "appearDate": "={{ $json.appearDate }}",
+            "company": "={{ $json.custName }}",
+            "description": "={{ $json.description }}",
+            "jobAddress": "={{ $json.jobAddrNoDesc }}{{ $json.jobAddress }}",
+            "jobName": "={{ $json.jobName }}",
+            "link": "={{ $json.link.job }}",
+            "major": "={{ $json.major }}",
+            "salarylow": "={{ $json.salaryLow }}",
+            "salaryhigh": "={{ $json.salaryHigh }}",
+            "MNC": "={{ $json.tags }}",
+            "languageRequirements": "={{ $json.languageRequirements }}",
+            "pcSkills": "={{ $json.pcSkills }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "appearDate",
+              "displayName": "appearDate",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "company",
+              "displayName": "company",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "description",
+              "displayName": "description",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "jobAddress",
+              "displayName": "jobAddress",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "jobName",
+              "displayName": "jobName",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "link",
+              "displayName": "link",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "major",
+              "displayName": "major",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "salarylow",
+              "displayName": "salarylow",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "salaryhigh",
+              "displayName": "salaryhigh",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "MNC",
+              "displayName": "MNC",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "languageRequirements",
+              "displayName": "languageRequirements",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "pcSkills",
+              "displayName": "pcSkills",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        1088,
+        512
+      ],
+      "id": "d6141ebe-a958-47e0-be28-e36f049b2a83",
+      "name": "Append row in sheet"
+    },
+    {
+      "parameters": {
+        "operation": "clear",
+        "documentId": {
+          "__rl": true,
+          "value": "1aQbufqN5885icG8rlll5rmaoTr2c7maJnOv7KzkILo4",
+          "mode": "list",
+          "cachedResultName": "104_n8n",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1aQbufqN5885icG8rlll5rmaoTr2c7maJnOv7KzkILo4/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1aQbufqN5885icG8rlll5rmaoTr2c7maJnOv7KzkILo4/edit#gid=0"
+        },
+        "keepFirstRow": true
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        704,
+        304
+      ],
+      "id": "c10a81d0-cdc5-44c7-8f54-11471ad6c797",
+      "name": "Clear sheet"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "237d832c-9c40-4733-a7cd-e8d952511f20",
+              "leftValue": "={{ $json.jobName }}",
+              "rightValue": "實習",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            },
+            {
+              "id": "74ab654a-c4e0-4384-8418-85962b50879e",
+              "leftValue": "={{ $json.jobName }}",
+              "rightValue": "intern",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "or"
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.3,
+      "position": [
+        896,
+        512
+      ],
+      "id": "7ce273c6-2069-46c4-969c-f05bc6984b23",
+      "name": "Filter"
+    },
+    {
+      "parameters": {
+        "aggregate": "aggregateAllItemData",
+        "destinationFieldName": "jobs",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1,
+      "position": [
+        720,
+        800
+      ],
+      "id": "a995dcd2-e3c4-4675-9781-e225cc01e2ad",
+      "name": "Aggregate"
+    },
+    {
+      "parameters": {
+        "sendTo": "your-email@example.com",
+        "subject": "你好！最新實習消息底加！",
+        "message": "=<h2>🎉 Here are your latest internship matches and skills word cloud!</h2>\n\n<p style=\"font-size: 16px; color: #333;\">\n  <strong>📊 Note:</strong> For the skills word cloud, please see the attachment below.\n</p>\n\n<hr style=\"border: 1px solid #eee; margin: 20px 0;\">\n\n<h3>💼 Top Internship Opportunities:</h3>\n<ul>\n  {{ \n    $('Aggregate').first().json.jobs.slice(0, 20).map(job => `\n      <li style=\"margin-bottom: 15px;\">\n        <strong>${job.jobName}</strong> at ${job.company} <br>\n        <a href=\"${job.link}\" style=\"color: #0066cc; text-decoration: none;\">👉 Click here to apply</a>\n      </li>\n    `).join('') \n  }}\n</ul>\n\n<br>\n<p style=\"color: #555; font-size: 14px;\">\n  <em>\n    {{ \n      $('Aggregate').first().json.jobs.length > 20 \n        ? `Showing 20 of ${$('Aggregate').first().json.jobs.length} jobs. For additional internships, please check the <a href=\"https://docs.google.com/spreadsheets/d/1aQbufqN5885icG8rlll5rmaoTr2c7maJnOv7KzkILo4/edit?usp=sharing\" style=\"color: #0066cc;\">Google Sheet</a>.` \n        : `View the full archive in your <a href=\"https://docs.google.com/spreadsheets/d/1aQbufqN5885icG8rlll5rmaoTr2c7maJnOv7KzkILo4/edit?usp=sharing\" style=\"color: #0066cc;\">Google Sheet</a>.` \n    }}\n  </em>\n</p>",
+        "options": {
+          "attachmentsUi": {
+            "attachmentsBinary": [
+              {
+                "property": "wordcloud,resume_fit,cluster_map,bundle"
+              }
+            ]
+          },
+          "ccList": "your-email@example.com"
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        1776,
+        784
+      ],
+      "id": "6ef6445e-06aa-435d-84a7-12e164863860",
+      "name": "Send a message",
+      "webhookId": "1478e881-f770-4a6c-a7bd-027256648b28"
+    },
+    {
+      "parameters": {
+        "jsCode": "return [\n  { json: { page: 1 } },\n  { json: { page: 2 } },\n  { json: { page: 3 } },\n  { json: { page: 4 } },\n  { json: { page: 5 } }\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        896,
+        304
+      ],
+      "id": "0dc57a7c-2a1f-49b7-82e9-bdb3d8576952",
+      "name": "Code in JavaScript"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://host.docker.internal:5001/generate-analysis-bundle",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ $('Aggregate').first().json.jobs }}",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "file",
+              "outputPropertyName": "bundle"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        1568,
+        784
+      ],
+      "id": "1f9626e6-dd87-4ab7-8357-effabc1e5d7b",
+      "name": "HTTP Request1"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "weeks",
+              "triggerAtDay": [
+                1
+              ],
+              "triggerAtHour": 7
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.3,
+      "position": [
+        512,
+        304
+      ],
+      "id": "61a0b9f4-8efb-4cbf-b047-4b2a93c7ff71",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "url": "http://host.docker.internal:5001/fetch-104-jobs",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "keyword",
+              "value": "財務管理 會計"
+            },
+            {
+              "name": "page",
+              "value": "={{ $json.page }}"
+            },
+            {
+              "name": "pagesize",
+              "value": "20"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+            },
+            {
+              "name": "Referer",
+              "value": "https://www.104.com.tw/"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        1088,
+        304
+      ],
+      "id": "fcb04447-9bf5-4f23-8652-81699b8cf03b",
+      "name": "HTTP Request2"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://host.docker.internal:5001/generate-wordcloud",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ $('Aggregate').first().json.jobs }}",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "file",
+              "outputPropertyName": "wordcloud"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        944,
+        784
+      ],
+      "id": "e6c8e22d-3d8f-4cd7-95ea-2186565498af",
+      "name": "HTTP Wordcloud"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://host.docker.internal:5001/generate-resume-fit-visual",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ $('Aggregate').first().json.jobs }}",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "file",
+              "outputPropertyName": "resume_fit"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        1152,
+        784
+      ],
+      "id": "b1bf4ef2-8b83-44de-b07d-57f84c56a0db",
+      "name": "HTTP Resume Fit"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://host.docker.internal:5001/generate-cluster-map",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ $('Aggregate').first().json.jobs }}",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "file",
+              "outputPropertyName": "cluster_map"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        1360,
+        784
+      ],
+      "id": "52e0ed39-688f-47ad-893c-c8f9097219d1",
+      "name": "HTTP Cluster Map"
+    }
+  ],
+  "connections": {
+    "Split Out": {
+      "main": [
+        [
+          {
+            "node": "Filter",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Clear sheet": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter": {
+      "main": [
+        [
+          {
+            "node": "Append row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append row in sheet": {
+      "main": [
+        [
+          {
+            "node": "Aggregate",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Aggregate": {
+      "main": [
+        [
+          {
+            "node": "HTTP Wordcloud",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request1": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Clear sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request2": {
+      "main": [
+        [
+          {
+            "node": "Split Out",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Wordcloud": {
+      "main": [
+        [
+          {
+            "node": "HTTP Resume Fit",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Resume Fit": {
+      "main": [
+        [
+          {
+            "node": "HTTP Cluster Map",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Cluster Map": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "staticData": null,
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "versionId": "617ab6d5-17b8-44dc-82b6-e6efec45329a"
+}

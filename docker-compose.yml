@@ -1,0 +1,31 @@
+services:
+  n8n:
+    build: .
+    image: custom-n8n
+    container_name: n8n-python
+    user: "root"
+    restart: always
+    ports:
+      - "5678:5678"
+    environment:
+      - N8N_HOST=0.0.0.0
+      - WEBHOOK_URL=http://localhost:5678/
+      - N8N_ENABLE_EXECUTE_COMMAND=true
+      - NODES_EXCLUDE=[]
+    volumes:
+      - ~/.n8n:/root/.n8n
+      - ./:/data
+    depends_on:
+      - wordcloud-api
+
+  wordcloud-api:
+    build: .
+    image: custom-n8n
+    container_name: wordcloud-api
+    user: "root"
+    restart: always
+    command: python /data/api_server.py
+    ports:
+      - "5001:5001"
+    volumes:
+      - ./:/data

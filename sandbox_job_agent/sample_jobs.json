@@ -1,0 +1,46 @@
+{
+  "jobs": [
+    {
+      "appearDate": "20260508",
+      "company": "Qualcomm Semiconductor Corporation 高通半導體",
+      "jobName": "【實習】Summer Intern - Mechanical Engineering Packaging Lab",
+      "description": "Workflows including material analysis, failure analysis, sample preparation, engineering data organization, Python automation, and packaging process documentation.",
+      "link": "https://www.104.com.tw/job/sample1",
+      "pcSkills": [
+        { "description": "Python" },
+        { "description": "Excel" }
+      ],
+      "languageRequirements": [
+        { "description": "English" }
+      ]
+    },
+    {
+      "appearDate": "20260508",
+      "company": "玩美移動股份有限公司",
+      "jobName": "B2B Digital Marketing Intern 數位行銷實習生",
+      "description": "Keyword research and competitor analysis, support retrieving data for traffic analysis, content reporting, dashboard maintenance, and market insight generation.",
+      "link": "https://www.104.com.tw/job/sample2",
+      "pcSkills": [
+        { "description": "Excel" },
+        { "description": "SQL" }
+      ],
+      "languageRequirements": [
+        { "description": "English" }
+      ]
+    },
+    {
+      "appearDate": "20260507",
+      "company": "妮珂人事顧問股份有限公司",
+      "jobName": "2026 妮維雅暑期實習 Supply Chain Intern",
+      "description": "Support daily planning activities, analyze supply chain data, create reports, improve workflows, and generate operational insights using Python and business analysis skills.",
+      "link": "https://www.104.com.tw/job/sample3",
+      "pcSkills": [
+        { "description": "Python" },
+        { "description": "PowerBI" }
+      ],
+      "languageRequirements": [
+        { "description": "English" }
+      ]
+    }
+  ]
+}

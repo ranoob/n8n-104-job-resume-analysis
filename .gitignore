@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Runtime outputs
+*.zip
+*.png
+*.jpg
+*.jpeg
+*.log
+outputs/
+
+# Local n8n / Docker data
+.n8n/
+storage/
+database.sqlite*
+n8nEventLog*.log
+
+# Personal or sensitive files
+resume/*.pdf
+resume_example.pdf
+*.pth
+
+# Local generated / scratch data
+104_jobs_response.json
+workflow_backup_*.json
+backups/
+
+# OS files
+.DS_Store
+
